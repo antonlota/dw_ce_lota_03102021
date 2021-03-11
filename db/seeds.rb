@@ -11,9 +11,9 @@ product1 = Product.create(name: "beef", quantity: 15 )
 product2 = Product.create(name: "pork", quantity: 15 )
 product3 = Product.create(name: "chicken", quantity: 15 )
 
-customer1 = Customer.create(name: "Jane" )
-customer2 = Customer.create(name: "Mark" )
-customer3 = Customer.create(name: "Marissa" )
+customer1 = Customer.create(name: "Jane", email: "jane@email.com" )
+customer2 = Customer.create(name: "Mark", email: "mark@email.com"  )
+customer3 = Customer.create(name: "Marissa", email: "marissa@email.com"  )
 
 one = Product.first.id
 two = (Product.first.id + 1)
