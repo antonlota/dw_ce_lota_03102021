@@ -111,6 +111,10 @@ paths:
                       type: number
                       format: float
                       example: 12.34
+                    customer_id:
+                      type: number
+                      format: integer
+                      example: 7
                     created_at:
                       type: string
                       format: date-time
@@ -185,6 +189,10 @@ paths:
                     sku:
                       type: string
                       example: ABC123
+                    quanity:
+                      type: number
+                      format: float
+                      example: 3.2
 
 servers:
 - url: http://{defaultHost}

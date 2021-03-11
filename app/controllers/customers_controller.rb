@@ -33,6 +33,21 @@ class CustomersController < ActionController::Base
         render json: { status: 422, message: 'Customer not Updated' }, status: :unprocessable_entity
       end
     end
+
+    def create_order
+      # create order with the amount in mind. this amount should subtract from the quantity that the product has
+      # if the order requested is larger than current quantity of selected product flash error message
+    end
+
+    
+    def show_order_history
+      @customer_orders = Customer.find(params[:id]).orders
+      render json: { status: 200, message: 'Loaded All Customer Orders ', data: @customer_orders }, status: :ok
+    end
+
+    def notifications
+
+    end
   
     private
   

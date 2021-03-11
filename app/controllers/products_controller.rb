@@ -37,7 +37,7 @@ class ProductsController < ActionController::Base
   private
 
   def product_params
-    params.permit(:name, :quantity )
+    params.permit(:sku, :quantity )
   end
   
 end
