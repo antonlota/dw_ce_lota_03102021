@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :customers
 
   get        '/customers/:id/notifications' => 'customers#notifications'
-  get        '/customers/:id/orders/:order_id' => 'customers#show_order_history'
+  get        '/customers/:id/orders' => 'customers#show_order_history'
+  post       '/customers/:id/orders' => 'customers#create_order'
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
